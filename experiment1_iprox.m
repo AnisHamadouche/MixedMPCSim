@@ -76,8 +76,8 @@ for kk=1:N_sim
     %gamma = 0.001*gamma_max;
     Atb = A_hat'*b_hat;
     %Run Solver
-    [dU,F_prox_subopt,e1,e2,u0,k]=solver_proxl1(dUp,A_hat, b_hat, n, N, gamma,L,MAX_ITER,ABSTOL,lambda,delta,epsilon_0);
-    %[dU,F_prox_subopt,e1,e2,u0,k]=solver_proxl0(dUp,A_hat, b_hat, n, N, gamma,L,MAX_ITER,ABSTOL,lambda,delta,epsilon_0);
+    %[dU,F_prox_subopt,e1,e2,u0,k]=solver_proxl1(dUp,A_hat, b_hat, n, N, gamma,L,MAX_ITER,ABSTOL,lambda,delta,epsilon_0);
+    [dU,F_prox_subopt,e1,e2,u0,k]=solver_proxl0(dUp,A_hat, b_hat, n, N, gamma,L,MAX_ITER,ABSTOL,lambda,delta,epsilon_0);
     %[dU,k,admm_optval] = solver_admml1(dUp,dUp,A_hat, b_hat, Atb, lambda, gamma, rho, MAX_ITER, ABSTOL, RELTOL);
     %[dU,k,admm_optval] = solver_admml0(dUp,dUp,A_hat, b_hat, Atb, lambda, gamma, rho, MAX_ITER, ABSTOL, RELTOL);
     %dUp=dU; %uncomment for admm
@@ -125,15 +125,15 @@ plot(k,dU1)
 ylabel('\Delta u')
 xlabel('Sampling Instant');
 
-PEAK(alg,:)=max(abs(y1(2:end)'));
-ITER(alg,:) = iter;
-ERROR(alg,:) = sum_square(y1'-spt(1:kk)');
-SumdU(alg,:) = sum_square(dU1');
-SumU(alg,:) = sum_square(u1');
-SettTime(alg,:)=kk;
-MAXU(alg,:)=max(u1');
-MAXdU=max(dU1');
-MINU(alg,:)=min(u1');
-MINdU=min(dU1');
-ERRORF(alg,:)=norm(y-spt(N_sim));
-alg=alg+1;
+% PEAK(alg,:)=max(abs(y1(2:end)'));
+% ITER(alg,:) = iter;
+% ERROR(alg,:) = sum_square(y1'-spt(1:kk)');
+% SumdU(alg,:) = sum_square(dU1');
+% SumU(alg,:) = sum_square(u1');
+% SettTime(alg,:)=kk;
+% MAXU(alg,:)=max(u1');
+% MAXdU=max(dU1');
+% MINU(alg,:)=min(u1');
+% MINdU=min(dU1');
+% ERRORF(alg,:)=norm(y-spt(N_sim));
+% alg=alg+1;

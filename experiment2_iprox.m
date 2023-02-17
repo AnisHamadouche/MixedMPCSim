@@ -8,7 +8,7 @@ epsilon_0 = 1E-4; %MAX tolerable prox error
 N = 30; %MPC horizon length
 ABSTOL = eps; %Tolerance
 MAX_ITER = 20; % gradient descent maximum iteration number
-digits(64);% for vpa(.)
+%digits(64);% for vpa(.)
 
 [sys, H, F, x0, m, n, l, xmax, xmin, ymax, ymin] = model_spacecraft(N);
 
