@@ -22,7 +22,7 @@ MixedMPCSim is an open-source MATLAB benchmark for reduced precision MPC simulat
 
 MixedMPCSim Benchmark implements PG and ADMM to solve the MPC problem
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;(1)\quad\quad\text{minimize}\quad\quad\frac{1}{2}\|A\Delta U-b\|_2^2+\|\Delta U\|_1" title="\Large \text{minimize}\quad\quad\frac{1}{2}\|A\Delta U-b\|_2^2 + \|\Delta U\|_1" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;(1)\quad\quad\text{minimize}\quad\quad\frac{1}{2}\|H dU-b\|_2^2+\| dU\|_p" title="\Large \text{minimize}\quad\quad\frac{1}{2}\|H dU-b\|_2^2 + \|dU\|_p" />
 
 where p = 1 or p = 0. MixedMPCSim Benchmark offers a choice to solve problem (1) using different custom data types.
 
