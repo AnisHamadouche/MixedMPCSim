@@ -22,7 +22,7 @@ MixedMPCSim is an open-source MATLAB benchmark for reduced precision MPC simulat
 
 MixedMPCSim Benchmark implements PG and ADMM to solve the MPC problem
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;(1)   \underset{\Delta U(k_i)}{\arg\min}\quad& \|\big(\mathbf{K}(.,k_i)^\top\Lambda\mathbf{K}(.,k_i)\big)^{\frac{1}{2}}\Delta U(k_i)     \\    &-\Lambda^{-\frac{1}{2}}\mathbf{K}(.,k_i)^\top\Phi^\top Q\big(R_s - \Psi x(k_i)\big)\|_2^2\\    &+\|\Delta U(k_i)\|_p" title="   \underset{\Delta U(k_i)}{\arg\min}\quad& \|\big(\mathbf{K}(.,k_i)^\top\Lambda\mathbf{K}(.,k_i)\big)^{\frac{1}{2}}\Delta U(k_i)     \\    &-\Lambda^{-\frac{1}{2}}\mathbf{K}(.,k_i)^\top\Phi^\top Q\big(R_s - \Psi x(k_i)\big)\|_2^2\\    &+\|\Delta U(k_i)\|_p" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;(1)   \underset{\Delta U(k_i)}{\arg\min}\quad& \|\big(\mathbf{K}(.,k_i)^\top\Lambda\mathbf{K}(.,k_i)\big)^{\frac{1}{2}}\Delta U(k_i)-\Lambda^{-\frac{1}{2}}\mathbf{K}(.,k_i)^\top\Phi^\top Q\big(R_s - \Psi x(k_i)\big)\|_2^2\\    &+\|\Delta U(k_i)\|_p" title="   \underset{\Delta U(k_i)}{\arg\min}\quad& \|\big(\mathbf{K}(.,k_i)^\top\Lambda\mathbf{K}(.,k_i)\big)^{\frac{1}{2}}\Delta U(k_i)-\Lambda^{-\frac{1}{2}}\mathbf{K}(.,k_i)^\top\Phi^\top Q\big(R_s - \Psi x(k_i)\big)\|_2^2\\    &+\|\Delta U(k_i)\|_p" />
 
 where p = 1 or p = 0. MixedMPCSim Benchmark offers a choice to solve problem (1) using different custom data types.
 
