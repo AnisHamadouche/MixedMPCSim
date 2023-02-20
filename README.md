@@ -60,14 +60,13 @@ you have any suggestions for improvement, or find any bugs, feel free to [contac
 If you find MixedMPCSIM Benchmark useful, please cite the following paper as appropriate:
 
 ```
-@inproceedings{wu2020approximate,
-  title={Approximate lasso model predictive control for resource constrained systems},
-  author={Wu, Yun and Mota, Jo{\~a}o FC and Wallace, Andrew M},
-  booktitle={2020 Sensor Signal Processing for Defence Conference (SSPD)},
-  pages={1--5},
-  year={2020},
-  organization={IEEE}
+@article{hamadouche2022sharper,
+  title={Sharper bounds for proximal gradient algorithms with errors},
+  author={Hamadouche, Anis and Wu, Yun and Wallace, Andrew M and Mota, Joao FC},
+  journal={arXiv preprint arXiv:2203.02204},
+  year={2022}
 }
+
 	
 ```
 
