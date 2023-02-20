@@ -22,7 +22,7 @@ MixedMPCSim is an open-source MATLAB benchmark for reduced precision MPC simulat
 
 MixedMPCSim Benchmark implements PG and ADMM to solve the MPC problem
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;(1)\quad\quad\text{minimize}\quad\quad\frac{1}{2}\|\big(\Phi^\top~Q\Phi+R\big)^{\frac{1}{2}}\Delta~U-\big(\Phi^\top Q\Phi+R\big)^{-\frac{1}{2}}\Phi^\top~Q\big(R_s-\Psi~x(k)\big)\|_2^2+\|\Delta~U\|_p" title="\Large \text{minimize}\quad\quad\frac{1}{2}\|\big(\Phi^\top~Q\Phi+R\big)^{\frac{1}{2}}\Delta~U-\big(\Phi^\top Q\Phi+R\big)^{-\frac{1}{2}}\Phi^\top~Q\big(R_s-\Psi~x(k)\big)\|_2^2+\|\Delta~U\|_p" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;(1)\quad\quad\text{minimize}\quad\quad\frac{1}{2}\|\Lambda~\Delta~U-\Gamma\|_2^2+\|\Delta~U\|_p" title="\Large \text{minimize}\quad\quad\frac{1}{2}\|\Lambda~\Delta~U-\Gamma\|_2^2 + \|\Delta~U\|_p" />
 
 where p = 1 or p = 0. MixedMPCSim Benchmark offers a choice to solve problem (1) using different custom data types.
 
