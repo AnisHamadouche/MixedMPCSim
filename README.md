@@ -34,7 +34,7 @@ where p = 1 or p = 0. MixedMPCSim Benchmark offers a choice to solve problem (1)
 ## Quick start<a name="QuickStart"></a>
 
 * Run
- 	>> main
+ 	`` >> main ``
 
 with custom problem data (add model, constraints and signals to ./models) or use the default spacecraft problem data to compare the output and control/differential control signal values under different machine representations. 
 
@@ -44,9 +44,9 @@ with custom problem data (add model, constraints and signals to ./models) or use
 * Choose the solver via "para.solver"  which can be set to either "pgd" or "admm". 
 
 To add custom data types add a case statement with custom data type name. To invoke a specific type within another function use  
-	>> T = mixedTypes('data type');
+	`` >> T = mixedTypes('data type'); ``
 then use casting as follows:
-	>> x = cast(x0, 'like', T.x)
+	`` >> x = cast(x0, 'like', T.x) ``
 
 	
 **NOTE:** _this is a research code, and is under active development. You may find 
