@@ -1,6 +1,6 @@
 ## MixedMPCSim Benchmark
 
-MixedMPCSim is an open-source MATLAB benchmark for reduced precision MPC simulation. MixedMPCSim is based on reguralized optimization formulation of MPC. You can choose between two numerical solver: the alternating direction method of multipliers (ADMM) or the Proximal-gradient Descent (PGD) under different floating-point and fixed-point machine representations.  
+MixedMPCSim is an open-source MATLAB benchmark for reduced precision MPC simulation. MixedMPCSim is based on reguralized optimization formulation of MPC. You can choose between two numeric solvers: the alternating direction method of multipliers (ADMM) or the Proximal-gradient Descent (PGD) under different floating-point and fixed-point machine representations.  
 
 **Current version:** 1.0.0
 
