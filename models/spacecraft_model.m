@@ -1,4 +1,4 @@
-clear all
+%clear all
 
 Ts = 0.1;
 w0 = 1;
