@@ -48,6 +48,17 @@ To add custom data types add a case statement with custom data type name. To inv
 then use casting as follows:
 	`` >> x = cast(x0, 'like', T.x) ``
 
+<figure>
+  <img src="./images/DuMPCIO_admm_l1_28.8.png" alt="Alt text for image" style="width:100%">
+  <figcaption>Fixed Point MPC control signals outputs.</figcaption>
+</figure>
+
+<figure>
+  <img src="./images/DuMPCDu_admm_l1_28.8.png" alt="Alt text for image" style="width:100%">
+  <figcaption>Fixed Point MPC differential control signal.</figcaption>
+</figure>
+
+
 	
 **NOTE:** _this is a research code, and is under active development. You may find 
 some undocumented inputs and options that are being used for development 
