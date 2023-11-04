@@ -4,14 +4,14 @@
 clear all
 clc
 
-frmt.dt = 'double'; % solver data format: 'single', 'fixed16', 'fixed12', 'fixed8'
+frmt.dt = 'fixed28'; % solver data format: 'single', 'fixed16', 'fixed12', 'fixed8'
 frmt.data = 'double'; % data casting format: edit ./utils/mixedTypes
-para.problem = 'l0'; % 'l1', 'l0'
+para.problem = 'l1'; % 'l1', 'l0'
 para.solver = 'admm'; % 'pgd', 'admm'
 
 addpath './utils'
 addpath './models'
-addpath './solvers'
+addpath './solver'
 addpath './mixedsolv'
 
 %% Read model and constraints
@@ -36,7 +36,7 @@ PSI = zeros(size(A,1)*N,size(A,2));
 m = size(A,1);            % Dimension of state
 n = size(B,2);            % Dimension of input control
 l = size(C,1);            % Dimension of output
-N_sim=200;
+N_sim=100;
 for i=1:N
     PSI((i-1)*size(A,1)+1:i*size(A,1),1:size(A,2)) = A^i;
 end 
@@ -139,26 +139,34 @@ for kk=1:N_sim
         break
     end
 end
+
 k=0:(kk-1);
 figure(1)
 subplot(2,1,1)
+str_titlle = sprintf('Solver: %s, Type: %s, Signedness: %s,\n Word length: %d, Fraction length: %d',upper(para.solver), mixedTypes(frmt.dt).x.DataTypeMode, mixedTypes(frmt.dt).x.Signedness, mixedTypes(frmt.dt).x.WordLength, mixedTypes(frmt.dt).x.FractionLength);
 % hold;
-semilogy(k,abs(y1'))
-xlabel('Sampling instant');
-ylabel('y');
-legend('Output');
+%semilogy(k,abs(y1'))
+plot(k,y1(5:end,:)')
+xlabel('Sampling instant','FontSize',16);
+ylabel('y','FontSize',16);
+legend('$Roll$','$Pitch$','$Yaw$', ...
+       'Interpreter','latex');
+sgtitle(str_titlle);
 subplot(2,1,2)
 % hold;
 stairs(k,u1');
-xlabel('Sampling instant');
-ylabel('u');
-legend('control');
+xlabel('Sampling instant','FontSize',16);
+ylabel('u','FontSize',16);
+legend('$\tau_1$','$\tau_2$','$\tau_3$','$\tau_\omega$', ...
+       'Interpreter','latex');
 figure(2)
 % hold;
 plot(k,dU1)
-ylabel('\Delta u')
-xlabel('Sampling Instant');
-
+title(str_titlle);
+ylabel('$\Delta u$','FontSize',16)
+xlabel('Sampling Instant','FontSize',16);
+legend('$\tau_1$','$\tau_2$','$\tau_3$','$\tau_\omega$', ...
+       'Interpreter','latex');
 % PEAK(alg,:)=max(abs(y1(2:end)'));
 % ITER(alg,:) = iter;
 % ERROR(alg,:) = sum_square(y1'-spt(1:kk)');
