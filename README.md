@@ -50,12 +50,14 @@ then use casting as follows:
 
 <figure>
   <img src="./images/DuMPCIO_admm_l1_28.8.png" alt="Alt text for image" style="width:50%">
-  <figcaption>Fixed Point MPC control signals outputs.</figcaption>
+  <figcaption>Fig.1 Fixed Point MPC control signals outputs.</figcaption>
 </figure>
+
+
 
 <figure>
   <img src="./images/DuMPCDu_admm_l1_28.8.png" alt="Alt text for image" style="width:50%">
-  <figcaption>Fixed Point MPC differential control signal.</figcaption>
+  <figcaption>Fig.2 Fixed Point MPC differential control signal.</figcaption>
 </figure>
 
 
